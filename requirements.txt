@@ -1,0 +1,9 @@
+flask
+flask-socketio
+flask-login
+flask-sqlalchemy
+eventlet
+flask-wtf
+wtforms
+email-validator
+werkzeug

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Flask Chat App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f0f8ff;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .login-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        .login-card h2 {
+            color: #5e72e4;
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            background-color: #5e72e4;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #324cdd;
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="login-card">
+            <h2 class="text-center">🔐 Welcome to Flask Chat</h2>
+            <form action="{{ url_for('login') }}" method="post">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" name="username" id="username" class="form-control" required autocomplete="off">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" name="password" id="password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
